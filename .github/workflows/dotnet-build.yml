@@ -1,7 +1,7 @@
 #-------------------------------------------------dotnet.yml-------------------------------------------------
 name: github-actions .NET
 
-on:[pull_request]
+on: [branch_protection_rule]
 push:
 branches: [ "main" ]
 pull_request:
