@@ -9,6 +9,8 @@ schedule:
 - cron: '0 0 * * 1'
 
 jobs:
+  my_first_job:
+    name: My first job
 build:
 
 runs-on: ubuntu-latest
