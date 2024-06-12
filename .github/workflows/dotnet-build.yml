@@ -7,7 +7,7 @@ branches: [ "main" ]
 pull_request:
 schedule:
 - cron: '0 0 * * 1'
-jobs.<job_id>.runs-on
+
 jobs:
   my_first_job:
     name: My first job
