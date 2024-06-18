@@ -7,3 +7,17 @@ on:
       -'*' # Trigger para qualquer pull request
   schedule:
     - cron: '0 0 * * *' # Executa diariamente à meia-noite
+jobs:
+build:
+runs-on: ubuntu-latest
+
+steps:
+- uses: actions/checkout@v4
+- name: Setup .NET
+  uses: actions/setup-dotnet@v4
+  with:
+    dotnet-version: 8.0.x
+- name: Restore dependencies
+  run: dotnet restore **/*.csproj
+- name: Build
+  run: dotnet build **/*.csproj --no-restore
